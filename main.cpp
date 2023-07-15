@@ -28,7 +28,7 @@ void render() {
 
     // Dibujar el polígono en el framebuffer con el color rojo
     framebuffer.dibujarPoligono(puntos2, Color(255, 255, 255));
-    framebuffer.fillPolygon(puntos2, Color(0,255,0));
+    framebuffer.fillPolygon(puntos2, Color(0,0,255));
 
     framebuffer.renderBuffer();
 }
