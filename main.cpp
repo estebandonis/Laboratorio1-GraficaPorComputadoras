@@ -9,52 +9,35 @@ Color currentColor(122, 122, 122);
 void render() {
     Framebuffer framebuffer(800, 600);
 
-    Color prueba(10, 10, 10);
-    clearColor = prueba;
-
     framebuffer.clear(clearColor);
 
-    Color NewCurrent(100,100,100);
-    currentColor = NewCurrent;
-
-    Vertex2 ver1 = {500, 500, Color(255, 0, 0)};
-    Vertex2 ver2 = {50, 50, Color(255, 0, 0)};
-
-    framebuffer.dibujarPunto(ver1, currentColor);
-    framebuffer.dibujarPunto(ver2, currentColor);
-
-    Vertex2 inicio = {100, 100, Color(255, 0, 0)};
-    Vertex2 fin = {200, 200, Color(255, 0, 0)};
-    Color verde(0, 255, 0);
-    framebuffer.dibujarLinea(inicio, fin, verde);
-
     // Definir un polígono con cuatro puntos
-    std::vector<Point> puntos;
-    Point punto1 = {165, 380};
-    Point punto2 = {185, 360};
-    Point punto3 = {180, 330};
-    Point punto4 = {207, 345};
-    Point punto5 = {233, 330};
-    Point punto6 = {230, 360};
-    Point punto7 = {250, 380};
-    Point punto8 = {220, 385};
-    Point punto9 = {205, 410};
-    Point punto10 = {193, 383};
+    std::vector<Point> puntos1;
+    Point punto1_1 = {165, 380};
+    Point punto2_1 = {185, 360};
+    Point punto3_1 = {180, 330};
+    Point punto4_1 = {207, 345};
+    Point punto5_1 = {233, 330};
+    Point punto6_1 = {230, 360};
+    Point punto7_1 = {250, 380};
+    Point punto8_1 = {220, 385};
+    Point punto9_1 = {205, 410};
+    Point punto10_1 = {193, 383};
 
-    puntos.push_back(punto1);
-    puntos.push_back(punto2);
-    puntos.push_back(punto3);
-    puntos.push_back(punto4);
-    puntos.push_back(punto5);
-    puntos.push_back(punto6);
-    puntos.push_back(punto7);
-    puntos.push_back(punto8);
-    puntos.push_back(punto9);
-    puntos.push_back(punto10);
+    puntos1.push_back(punto1_1);
+    puntos1.push_back(punto2_1);
+    puntos1.push_back(punto3_1);
+    puntos1.push_back(punto4_1);
+    puntos1.push_back(punto5_1);
+    puntos1.push_back(punto6_1);
+    puntos1.push_back(punto7_1);
+    puntos1.push_back(punto8_1);
+    puntos1.push_back(punto9_1);
+    puntos1.push_back(punto10_1);
 
     // Dibujar el polígono en el framebuffer con el color rojo
-    framebuffer.dibujarPoligono(puntos, Color(255, 0, 0));
-    framebuffer.fillPolygon(puntos, Color(255,255,255));
+    framebuffer.dibujarPoligono(puntos1, Color(255, 255, 255));
+    framebuffer.fillPolygon(puntos1, Color(255,255,0));
 
     framebuffer.renderBuffer();
 }
